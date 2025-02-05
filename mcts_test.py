@@ -74,7 +74,7 @@ def test_mcts_agent_simulate(agent, initial_state):
     assert reward == 0.5
 
 def test_mcts_agent_generate_self_play_data(agent):
-    filename = '/Users/lindentree/Projects/lnnkatago/self_play_data.h5'
+    filename = 'self_play_data.h5'
     agent.generate_self_play_data(agent, num_games=1, board_size=3, filename=filename)
     with h5py.File(filename, 'r') as f:
         assert 'states' in f
